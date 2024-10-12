@@ -7,8 +7,8 @@ function setInitialPositions() {
     const image2 = document.getElementById('image2');
 
     if (image1 && image2) {
-        image1.style.transform = 'translateY(-50%) translateX(-5em)';
-        image2.style.transform = 'translateY(-50%) translateX(50em)';
+        image1.style.transform = 'translateY(-50%) translateX(-2em)';
+        image2.style.transform = 'translateY(-50%) translateX(2em)';
     }
 }
 
@@ -26,10 +26,10 @@ function handleImageMovement() {
     const image2 = document.getElementById('image2');
 
     if (image1 && image2) {
-        const maxTranslate = 200;
-        const translateValue = Math.min(scrollPosition * 0.05, maxTranslate);
-        image1.style.transform = `translateY(-50%) translateX(calc(-30em + ${translateValue}em))`;
-        image2.style.transform = `translateY(-50%) translateX(calc(5em - ${translateValue}em))`;
+        const maxTranslate = 32;
+        const translateValue = Math.min(scrollPosition * 0.035, maxTranslate);
+        image1.style.transform = `translateY(-50%) translateX(calc(-25em + ${translateValue}em))`;
+        image2.style.transform = `translateY(-50%) translateX(calc(25em - ${translateValue}em))`;
     }
 }
 
@@ -51,7 +51,7 @@ function handleCircleAnimation() {
 }
 
 const cursor = document.querySelectorAll('.cursor');
-const links = document.querySelectorAll("a");
+const links = document.querySelectorAll("summary, a");
 
 window.addEventListener("mousemove", (e) => {
     let x = e.clientX;
@@ -79,17 +79,16 @@ const button = document.querySelector('.button');
 function wieBetaaldHetBier() {
 
     var namen = ["Ik heb weleens zand gegeten", "Ik eet me soms misselijk", "Ik ben weleens tegen een glazen muur gefietst",
-         "Ik heb geen stalen zenuwen", "ik heb allebij mijn kleine tenen gebroken",
+        "Ik heb geen stalen zenuwen", "Ik heb mijn beide kleine tenen gebroken",
         "Ik ben mijn favoriete trui kwijt",
-        "Ik heb ooit perongelijk binnen vuurwerk afgestoken",
-        "Ik ben bang voor vissen", "Ik ben goed in pingpong", "Ik hou niet van vieze handen", "In de zomer is de eiffeltoren 15cm langer dan in de winter", "Ik wordt nooit door muggen geprikt",
+        "Ik heb ooit per ongeluk binnen vuurwerk afgestoken",
+        "Ik ben bang voor vissen", "Ik ben goed in pingpong", "Ik hou niet van vieze handen", "Ik word nooit door muggen geprikt",
         "Ik luister naar Katy Perry", "Ik kan niet zo goed klussen",
-        "Ik ben geen fan van naar de kapper gaan",
+        "Ik ben geen fan van naar de kapper gaan", "Pindakaas rechtstreeks uit de pot lepelen is m'n guilty pleasure", "Ik heb een kleine blaas", "Ik eet mijn yoghurt zonder granola",
+        "Ik eet geen rauwe tomaat", "Ik wil ooit nog een tattoo", "Ik heb meegedaan aan de kids top 20", "Ik heb al 4x The Office uitgekeken"
+    ];
 
-        
-        ];
-
-    var randomGetal = Math.random() * 15;
+    var randomGetal = Math.random() * 21;
 
     var pElement = document.querySelector("p.naam");
 
